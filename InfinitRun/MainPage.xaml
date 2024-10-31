@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="InfinitRun.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.NavBarIsVisible="false">
+
+    <Grid>
+        <Image
+            Aspect="AspectFill"
+            HorizontalOptions="Fill"
+            Source="palco.png"
+            VerticalOptions="Fill" />
+
+        <Image
+            HorizontalOptions="Fill"
+            Source="piso.png"
+            VerticalOptions="End" />
+
+        <Image Source="refri.png"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                HeightRequest="125"
+                WidthRequest="125"/>
+
+        <Image
+            Aspect="Fill"
+            HeightRequest="85"
+            HorizontalOptions="Center"
+            Source="cupcak.png"
+            VerticalOptions="Center"
+            WidthRequest="85" />
+
+
+    </Grid>
+
+</ContentPage>
