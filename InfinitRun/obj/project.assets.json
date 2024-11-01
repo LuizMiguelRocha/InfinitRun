@@ -32923,11 +32923,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno\\Downloads\\InfinitRun\\InfinitRun\\InfinitRun.csproj",
+      "projectUniqueName": "C:\\Users\\Aluno\\InfinitRun\\InfinitRun\\InfinitRun.csproj",
       "projectName": "InfinitRun",
-      "projectPath": "C:\\Users\\Aluno\\Downloads\\InfinitRun\\InfinitRun\\InfinitRun.csproj",
+      "projectPath": "C:\\Users\\Aluno\\InfinitRun\\InfinitRun\\InfinitRun.csproj",
       "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno\\Downloads\\InfinitRun\\InfinitRun\\obj\\",
+      "outputPath": "C:\\Users\\Aluno\\InfinitRun\\InfinitRun\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [

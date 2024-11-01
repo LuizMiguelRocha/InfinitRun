@@ -6,22 +6,69 @@
     Shell.NavBarIsVisible="false">
 
     <Grid>
+        <HorizontalStackLayout x:Name="HSLayer1">
         <Image
             Aspect="AspectFill"
             HorizontalOptions="Fill"
             Source="palco.png"
             VerticalOptions="Fill" />
 
-        <Image
+         <Image
+            Aspect="AspectFill"
             HorizontalOptions="Fill"
-            Source="piso.png"
-            VerticalOptions="End" />
+            Source="palco.png"
+            VerticalOptions="Fill" />
 
+         <Image
+            Aspect="AspectFill"
+            HorizontalOptions="Fill"
+            Source="palco.png"
+            VerticalOptions="Fill" />        
+        </HorizontalStackLayout>    
+
+
+        <HorizontalStackLayout x:Name="HSLayer2">
         <Image Source="refri.png"
                 HorizontalOptions="Center"
                 VerticalOptions="End"
-                HeightRequest="125"
-                WidthRequest="125"/>
+                HeightRequest="115"
+                WidthRequest="115"/>
+
+        <Image Source="pizzaum.png"
+                HorizontalOptions="End"
+                VerticalOptions="End"
+                HeightRequest="150"
+                WidthRequest="150"/> 
+
+        <Image Source="pizzarefri.png"
+                HorizontalOptions="Start"
+                VerticalOptions="End"
+                HeightRequest="150"
+                WidthRequest="150"/>        
+
+        </HorizontalStackLayout>     
+
+        
+        <HorizontalStackLayout x:Name="HSLayerChao">
+        <Image
+            HorizontalOptions="Fill"
+            Source="piso.png"
+            VerticalOptions="End"
+            WidthRequest="1000" />
+
+        <Image
+            HorizontalOptions="Fill"
+            Source="piso.png"
+            VerticalOptions="End"
+            WidthRequest="1000" />
+
+        <Image
+            HorizontalOptions="Fill"
+            Source="piso.png"
+            VerticalOptions="End"
+            WidthRequest="1000" />  
+
+        </HorizontalStackLayout>  
 
         <Image
             Aspect="Fill"
@@ -30,6 +77,7 @@
             Source="cupcak.png"
             VerticalOptions="Center"
             WidthRequest="85" />
+
 
 
     </Grid>
