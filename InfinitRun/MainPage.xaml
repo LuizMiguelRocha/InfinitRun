@@ -10,20 +10,21 @@
         <Image
             Aspect="AspectFill"
             HorizontalOptions="Fill"
-            Source="palco.png"
+            Source="fundo.png"
             VerticalOptions="Fill" />
 
          <Image
             Aspect="AspectFill"
             HorizontalOptions="Fill"
-            Source="palco.png"
+            Source="fundo.png"
             VerticalOptions="Fill" />
 
          <Image
             Aspect="AspectFill"
             HorizontalOptions="Fill"
-            Source="palco.png"
-            VerticalOptions="Fill" />        
+            Source="fundo.png"
+            VerticalOptions="Fill" />    
+            
         </HorizontalStackLayout>    
 
 
@@ -74,7 +75,7 @@
             Aspect="Fill"
             HeightRequest="85"
             HorizontalOptions="Center"
-            Source="cupcak.png"
+            Source="foxyum.png"
             VerticalOptions="Center"
             WidthRequest="85" />
 
