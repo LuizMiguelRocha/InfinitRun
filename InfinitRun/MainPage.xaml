@@ -27,28 +27,6 @@
             
         </HorizontalStackLayout>    
 
-
-        <HorizontalStackLayout x:Name="HSLayer2">
-        <Image Source="refri.png"
-                HorizontalOptions="Center"
-                VerticalOptions="End"
-                HeightRequest="115"
-                WidthRequest="115"/>
-
-        <Image Source="pizzaum.png"
-                HorizontalOptions="End"
-                VerticalOptions="End"
-                HeightRequest="150"
-                WidthRequest="150"/> 
-
-        <Image Source="pizzarefri.png"
-                HorizontalOptions="Start"
-                VerticalOptions="End"
-                HeightRequest="150"
-                WidthRequest="150"/>        
-
-        </HorizontalStackLayout>     
-
         
         <HorizontalStackLayout x:Name="HSLayerChao">
         <Image
@@ -56,7 +34,7 @@
             Source="piso.png"
             VerticalOptions="End"
             WidthRequest="1000" />
-
+ 
         <Image
             HorizontalOptions="Fill"
             Source="piso.png"

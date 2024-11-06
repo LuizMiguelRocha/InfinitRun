@@ -33,13 +33,10 @@ public partial class MainPage : ContentPage
 	{
 		foreach (var a in HSLayer1.Children)
 		(a as Image).WidthRequest = w;
-		foreach (var a in HSLayer2.Children)
-		(a as Image).WidthRequest = w;
 		foreach (var a in HSLayerChao.Children)
 		(a as Image).WidthRequest = w;
 
 		HSLayer1.WidthRequest = w * 1.5;
-		HSLayer2.WidthRequest = w * 1.5;	
 		HSLayerChao.WidthRequest = w * 1.5;
 	}
 
@@ -47,7 +44,6 @@ public partial class MainPage : ContentPage
 	{
 		MoveCenario();
 		GerenciaCenario(HSLayer1);
-		GerenciaCenario(HSLayer2);
 		GerenciaCenario(HSLayerChao);
 
 	}
@@ -55,7 +51,6 @@ public partial class MainPage : ContentPage
 	void MoveCenario()
 	{
 		HSLayer1.TranslationX -= Velocidade1;
-		HSLayer2.TranslationX -= Velocidade2;
 		HSLayerChao.TranslationX -= Velocidade;
 	}
 
@@ -70,7 +65,63 @@ public partial class MainPage : ContentPage
 		}
 	}
 
+	protected override void OnAppearing()
+	{
+		base.OnAppearing();
+		Desenha();
+	}
 
+
+
+		public void Stop()
+		{
+			Parado = true;
+		}
+
+		public void Play()
+		{
+			Parado = false;
+		}
+
+		public void SetAnimacaoAtiva(int A)
+		{
+			AnimacaoAtiva = A;
+		}
+
+		public void Desenha()
+		{
+			if (Parado)
+			return;
+			string foxyum = "";
+			int TamanhoAnimacao = 0;
+			if (AnimacaoAtiva == 1)
+			{
+				foxyum = Animacao1[FrameAtual];
+				TamannhoAnimacao = Animacao1.Count;
+			}
+
+			else if (AnimacaoAtiva == 2)
+			{
+				foxydois = Animacao2[FrameAtual];
+				TamanhoAnimacao = Animacao2.Count;
+			}
+
+			compImagem.Source = ImageSource.FromFile(foxyum);
+			FrameAtual++;
+
+			if (FrameAtual >= TamanhoAnimacao)
+			{
+				if (Loop)
+				FrameAtal = 0;
+				else
+				{
+					Parado = true;
+					QuandoParar();
+				}
+			}
+		}
+
+			
 
 	public MainPage()
 	{
