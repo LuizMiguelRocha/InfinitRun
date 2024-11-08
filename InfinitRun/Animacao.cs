@@ -1,6 +1,6 @@
 namespace InfinitRun;
 
-	public class Animacao
+	public class Animacao : MainPage
 	{
 		protected List<String> Animacao1 = new List<String>();
 		protected List<String> Animacao2 = new List<String>();

@@ -2,6 +2,12 @@
 
 public partial class MainPage : ContentPage
 {
+
+		public MainPage()
+	{
+		InitializeComponent();
+	}
+
 	int count = 0;
 
 	bool EstaMorto = false;
@@ -68,65 +74,23 @@ public partial class MainPage : ContentPage
 	protected override void OnAppearing()
 	{
 		base.OnAppearing();
-		Desenha();
 	}
 
-
-
-		public void Stop()
-		{
-			Parado = true;
-		}
-
-		public void Play()
-		{
-			Parado = false;
-		}
-
-		public void SetAnimacaoAtiva(int A)
-		{
-			AnimacaoAtiva = A;
-		}
-
-		public void Desenha()
-		{
-			if (Parado)
-			return;
-			string foxyum = "";
-			int TamanhoAnimacao = 0;
-			if (AnimacaoAtiva == 1)
-			{
-				foxyum = Animacao1[FrameAtual];
-				TamannhoAnimacao = Animacao1.Count;
-			}
-
-			else if (AnimacaoAtiva == 2)
-			{
-				foxydois = Animacao2[FrameAtual];
-				TamanhoAnimacao = Animacao2.Count;
-			}
-
-			compImagem.Source = ImageSource.FromFile(foxyum);
-			FrameAtual++;
-
-			if (FrameAtual >= TamanhoAnimacao)
-			{
-				if (Loop)
-				FrameAtal = 0;
-				else
-				{
-					Parado = true;
-					QuandoParar();
-				}
-			}
-		}
-
-			
-
-	public MainPage()
+	public void Desenha()
 	{
-		InitializeComponent();
+		if(Parado)
+		return;
+		string foxy01;
+		int TamanhoAnimação;
+		if(AnimacaoAtiva == 1)
+		{
+			foxy01 = Animacao1 [FrameAtual];
+			TamanhoAnimacao = Animacao1.Count;
+		} 
+		else if (AnimacaoAtiva == 2)
+		{
+			
+		}
 	}
-
 }
 
