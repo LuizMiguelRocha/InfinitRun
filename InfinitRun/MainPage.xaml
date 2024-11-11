@@ -10,21 +10,13 @@
         <Image
             Aspect="AspectFill"
             HorizontalOptions="Fill"
-            Source="fundo.png"
-            VerticalOptions="Fill" />
+            Source="fundo.png" />
 
-         <Image
+        <Image
             Aspect="AspectFill"
             HorizontalOptions="Fill"
-            Source="fundo.png"
-            VerticalOptions="Fill" />
+            Source="fundo.png" />    
 
-         <Image
-            Aspect="AspectFill"
-            HorizontalOptions="Fill"
-            Source="fundo.png"
-            VerticalOptions="Fill" />    
-            
         </HorizontalStackLayout>    
 
         
@@ -33,19 +25,19 @@
             HorizontalOptions="Fill"
             Source="piso.png"
             VerticalOptions="End"
-            WidthRequest="1000" />
+            WidthRequest="1500" />
  
         <Image
             HorizontalOptions="Fill"
             Source="piso.png"
             VerticalOptions="End"
-            WidthRequest="1000" />
+            WidthRequest="1500" />
 
         <Image
             HorizontalOptions="Fill"
             Source="piso.png"
             VerticalOptions="End"
-            WidthRequest="1000" />  
+            WidthRequest="1500" />  
 
         </HorizontalStackLayout>  
 

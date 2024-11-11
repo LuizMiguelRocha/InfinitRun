@@ -42,7 +42,7 @@ public partial class MainPage : ContentPage
 		foreach (var a in HSLayerChao.Children)
 		(a as Image).WidthRequest = w;
 
-		HSLayer1.WidthRequest = w * 1.5;
+		HSLayer1.WidthRequest = w * 2.0;
 		HSLayerChao.WidthRequest = w * 1.5;
 	}
 
@@ -52,6 +52,21 @@ public partial class MainPage : ContentPage
 		GerenciaCenario(HSLayer1);
 		GerenciaCenario(HSLayerChao);
 
+	}
+
+	protected override void OnAppearing()
+	{
+		base.OnAppearing();
+		Desenha();
+	}
+
+	async Task Desenha()
+	{
+		while(!EstaMorto)
+		{
+			GerenciaCenarios();
+			await Task.Delay(TempoEntreFrames);
+		}
 	}
 
 	void MoveCenario()
@@ -71,26 +86,5 @@ public partial class MainPage : ContentPage
 		}
 	}
 
-	protected override void OnAppearing()
-	{
-		base.OnAppearing();
-	}
-
-	public void Desenha()
-	{
-		if(Parado)
-		return;
-		string foxy01;
-		int TamanhoAnimação;
-		if(AnimacaoAtiva == 1)
-		{
-			foxy01 = Animacao1 [FrameAtual];
-			TamanhoAnimacao = Animacao1.Count;
-		} 
-		else if (AnimacaoAtiva == 2)
-		{
-			
-		}
-	}
 }
 
