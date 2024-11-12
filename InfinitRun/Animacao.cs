@@ -35,8 +35,8 @@ namespace InfinitRun;
 	{
 		if(Parado)
 		return;
-		string foxy01;
-		int TamanhoAnimacao;
+		string foxy01 = "foxy01";
+		int TamanhoAnimacao = 2;
 		if(AnimacaoAtiva == 1)
 		{
 			foxy01 = Animacao1 [FrameAtual];

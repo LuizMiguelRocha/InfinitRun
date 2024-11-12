@@ -43,6 +43,7 @@
 
         <Image
             Aspect="Fill"
+            x:Name="imgPlayer"
             HeightRequest="85"
             HorizontalOptions="Center"
             Source="foxyum.png"

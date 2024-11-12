@@ -6,6 +6,8 @@ public partial class MainPage : ContentPage
 		public MainPage()
 	{
 		InitializeComponent();
+		player = new Player(imgPlayer);
+		player.Run();
 	}
 
 	int count = 0;
@@ -19,6 +21,7 @@ public partial class MainPage : ContentPage
 	int Velocidade = 0;
 	int LarguraJanela = 0;
 	int AlturaJanela = 0;
+	Player player;
 
 	protected override void OnSizeAllocated(Double w, Double h)
 	{
@@ -65,6 +68,7 @@ public partial class MainPage : ContentPage
 		while(!EstaMorto)
 		{
 			GerenciaCenarios();
+			player.Desenha();
 			await Task.Delay(TempoEntreFrames);
 		}
 	}
