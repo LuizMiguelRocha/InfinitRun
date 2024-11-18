@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InfinitRun")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+d58f7c9bea51ba9e1b0a089fb81c1b09b43b8654")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+fcd7e65b076d691ec7aaf1d59774fced58b569a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("InfinitRun")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InfinitRun")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

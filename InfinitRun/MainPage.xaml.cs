@@ -11,7 +11,6 @@ public partial class MainPage : ContentPage
 	}
 
 	int count = 0;
-
 	bool EstaMorto = false;
 	bool EstaPulando = false;
 	const int TempoEntreFrames = 25;
@@ -21,6 +20,14 @@ public partial class MainPage : ContentPage
 	int Velocidade = 0;
 	int LarguraJanela = 0;
 	int AlturaJanela = 0;
+	const int ForcaGravidade = 6;
+	bool EstaNoChao = true;
+	bool EstaNoAr = false;
+	int TempoPulando = 0;
+	int TempoNoAr = 0;
+	const int ForcaPulo = 8;
+	const int MaxTempoPulando = 6;
+	const int MaxTempoNoAr = 4;
 	Player player;
 
 	protected override void OnSizeAllocated(Double w, Double h)
@@ -71,6 +78,14 @@ public partial class MainPage : ContentPage
 			player.Desenha();
 			await Task.Delay(TempoEntreFrames);
 		}
+		if(!EstaPulando && !EstaNoAr)
+		{
+			AplicaGravidade();
+			player.Desenha();
+		}
+		else
+		AplicaPulo();
+		await Task.Delay(TempoEntreFrames);
 	}
 
 	void MoveCenario()
@@ -90,5 +105,42 @@ public partial class MainPage : ContentPage
 		}
 	}
 
+	void AplicaGravidade()
+	{
+		if (player.GetY() < 0)
+		player.MoveY(ForcaGravidade);
+		else if (player.GetY() >= 0)
+		{
+			player.SetY(0);
+			EstaNoChao = true;
+		}
+	}
+	
+	void AplicaPulo()
+	{
+		EstaNoChao = false;
+		if(EstaPulando && TempoPulando >= MaxTempoPulando)
+		{
+			EstaPulando = false;
+			EstaNoAr = false;
+			TempoNoAr = 0;
+		}
+		else if (EstaNoAr && TempoNoAr >= MaxTempoNoAr)
+		{
+			EstaPulando = false;
+			EstaNoAr = false;
+			TempoPulando = 0;
+			TempoNoAr = 0;
+		}
+		else if (EstaPulando && TempoEntreFramesPulando < MaxTempoPulando)
+		{
+			player.MoveY (-ForcaPulo);
+			TempoPulando++;
+		}
+		else if (EstaNoAr)
+		{
+			TempoNoAr++;
+		}
+	}
 }
 

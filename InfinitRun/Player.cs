@@ -5,11 +5,6 @@ public class Player : Animacao
 {
     public Player(Image a):base(a)
     {
-             for (int i = 1; i <= 2; ++i);
-        Animacao1.Add($"foxy01{i.ToString("D2")}.png" );
-
-        for (int i = 1; i <= 15; ++i);
-        Animacao2.Add($"frame-01{i.ToString("D2")}.png" );
 
         SetAnimacaoAtiva(1);
     }
@@ -25,5 +20,20 @@ public class Player : Animacao
         Loop = true;
         SetAnimacaoAtiva(1);
         Play();
+    }
+
+    public void MoveY(int s)
+    {
+        ImageView.TranslationY += s;
+    }
+
+    public void GetY()
+    {
+        return ImageView.TranslationY;
+    }
+
+    public void SetY(double a)
+    {
+        ImageView.TranslationY = a;
     }
 }
