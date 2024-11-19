@@ -3,53 +3,52 @@
     x:Class="InfinitRun.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ff="clr-namespace:FFImageLoading.Maui;assembly=FFImageLoading.Maui"
     Shell.NavBarIsVisible="false">
 
     <Grid>
         <HorizontalStackLayout x:Name="HSLayer1">
-        <Image
-            Aspect="AspectFill"
-            HorizontalOptions="Fill"
-            Source="fundo.png" />
+            <Image
+                Aspect="AspectFill"
+                HorizontalOptions="Fill"
+                Source="fundo.png"/>
 
-        <Image
-            Aspect="AspectFill"
-            HorizontalOptions="Fill"
-            Source="fundo.png" />    
+            <Image
+                Aspect="AspectFill"
+                HorizontalOptions="Fill"
+                Source="fundo.png"/>
 
-        </HorizontalStackLayout>    
+        </HorizontalStackLayout>
 
-        
+
         <HorizontalStackLayout x:Name="HSLayerChao">
-        <Image
-            HorizontalOptions="Fill"
-            Source="piso.png"
-            VerticalOptions="End"
-            WidthRequest="1500" />
- 
-        <Image
-            HorizontalOptions="Fill"
-            Source="piso.png"
-            VerticalOptions="End"
-            WidthRequest="1500" />
+            <Image
+                HorizontalOptions="Fill"
+                Source="piso.png"
+                VerticalOptions="End"
+                WidthRequest="1500"/>
 
-        <Image
-            HorizontalOptions="Fill"
-            Source="piso.png"
-            VerticalOptions="End"
-            WidthRequest="1500" />  
+            <Image
+                HorizontalOptions="Fill"
+                Source="piso.png"
+                VerticalOptions="End"
+                WidthRequest="1500"/>
 
-        </HorizontalStackLayout>  
+            <Image
+                HorizontalOptions="Fill"
+                Source="piso.png"
+                VerticalOptions="End"
+                WidthRequest="1500"/>
 
-        <Image
-            Aspect="Fill"
-            x:Name="imgPlayer"
-            HeightRequest="85"
-            HorizontalOptions="Center"
-            Source="foxyum.png"
-            VerticalOptions="Center"
-            WidthRequest="85" />
+        </HorizontalStackLayout>
 
+       <ff:CachedImageView  x:Name="imgPlayer"
+                            CacheType="All"
+                            CacheDuration="365"
+                            Source="faxy01.png"
+                            HorizontalOptions="Start"
+                            VerticalOptions="End"
+                            HeightRequest="100"/>
 
 
     </Grid>

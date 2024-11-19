@@ -1,5 +1,6 @@
 namespace InfinitRun;
 
+using FFImageLoading.Maui;
 	public class Animacao
 	{
 		protected List<String> Animacao1 = new List<String>();
@@ -9,11 +10,12 @@ namespace InfinitRun;
 		protected int AnimacaoAtiva = 1;
 		bool Parado = true;
 		int FrameAtual = 1;
-		protected Image compImagem;
+		protected CachedImageView imageView;
 
-		public Animacao(Image A)
+
+		public Animacao(CachedImageView a)
 		{
-			compImagem = A;
+			imageView = a;
 		}
 
 		public void Stop()
@@ -48,7 +50,7 @@ namespace InfinitRun;
 			TamanhoAnimacao = Animacao2.Count;
 		}
 
-		compImagem.Source = ImageSource.FromFile(foxy01);
+		imageView.Source = ImageSource.FromFile(foxy01);
 		FrameAtual++;
 
 		if (FrameAtual >= TamanhoAnimacao)
@@ -66,5 +68,20 @@ namespace InfinitRun;
 	{
 
 	}
+
+	 public void MoveY(int s)
+    {
+        imageView.TranslationY += s;
+    }
+
+    public double GetY()
+    {
+        return imageView.TranslationY;
+    }
+
+    public void SetY(double a)
+    {
+        imageView.TranslationY = a;
+    }
 
     }        

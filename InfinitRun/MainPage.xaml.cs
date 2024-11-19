@@ -1,5 +1,7 @@
 ﻿namespace InfinitRun;
 
+using FFImageLoading.Maui;
+
 public partial class MainPage : ContentPage
 {
 
@@ -109,7 +111,7 @@ public partial class MainPage : ContentPage
 	{
 		if (player.GetY() < 0)
 		player.MoveY(ForcaGravidade);
-		else if (player.GetY() >= 0)
+		else if (player.GetY() > 0)
 		{
 			player.SetY(0);
 			EstaNoChao = true;
@@ -132,7 +134,7 @@ public partial class MainPage : ContentPage
 			TempoPulando = 0;
 			TempoNoAr = 0;
 		}
-		else if (EstaPulando && TempoEntreFramesPulando < MaxTempoPulando)
+		else if (EstaPulando && TempoPulando < MaxTempoPulando)
 		{
 			player.MoveY (-ForcaPulo);
 			TempoPulando++;
